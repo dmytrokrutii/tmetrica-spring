@@ -1,0 +1,1 @@
+COPY activitys FROM '${dir}/src/main/resources/db/devdata/V6_activitys.csv' CSV HEADER;

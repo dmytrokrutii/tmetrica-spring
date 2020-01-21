@@ -1,0 +1,3 @@
+id, email, password, name, surname, role
+1, "solosuicide133@gmail.com", "password", "Dima", "Krutii",ADMIN
+2, "mykytafrolow@gmail.com", "password", "Mykyta", "Frolow",USER

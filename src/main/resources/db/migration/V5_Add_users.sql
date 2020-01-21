@@ -1,0 +1,1 @@
+COPY users FROM '${dir}/src/main/resources/db/devdata/V5_users.csv' CSV HEADER;
