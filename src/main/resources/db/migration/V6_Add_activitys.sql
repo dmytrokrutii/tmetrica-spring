@@ -1,1 +1,1 @@
-COPY activitys FROM '${dir}/src/main/resources/db/devdata/V6_activitys.csv' CSV HEADER;
+COPY activitys(name, start_time, end_time, status) FROM '${dir}/src/main/resources/db/devdata/V6_activitys.csv' CSV HEADER;

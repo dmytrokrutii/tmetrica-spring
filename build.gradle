@@ -40,12 +40,14 @@ dependencies {
 	implementation 'org.flywaydb:flyway-core'
 	implementation 'org.springframework.session:spring-session-core'
 	compileOnly 'org.projectlombok:lombok'
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation 'org.springframework.security:spring-security-test'
+	testCompile group: 'junit', name: 'junit', version: '4.13'
 }
 
 test {

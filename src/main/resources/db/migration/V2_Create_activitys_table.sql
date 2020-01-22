@@ -4,7 +4,7 @@ CREATE TYPE public.status AS ENUM
 ALTER TYPE public.status
     OWNER TO postgres;
 
-CREATE SEQUENCE activitys_id_seq;
+CREATE SEQUENCE if not exists activitys_id_seq;
 
 CREATE TABLE activitys
 (

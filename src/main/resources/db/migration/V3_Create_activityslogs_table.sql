@@ -1,4 +1,4 @@
-CREATE SEQUENCE activitylogs_id_seq;
+CREATE SEQUENCE if not exists activitylogs_id_seq;
 
 CREATE TABLE activitylogs
 (
