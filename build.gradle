@@ -42,6 +42,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 	runtimeOnly 'org.postgresql:postgresql'
+	testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

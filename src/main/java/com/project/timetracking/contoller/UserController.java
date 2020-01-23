@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+    private UserService userService;
 
     @Autowired
-    private UserService userService;
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @RequestMapping(value = "/email/{email}", method = RequestMethod.GET)
     @ResponseBody

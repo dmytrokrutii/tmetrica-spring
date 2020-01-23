@@ -1,5 +1,6 @@
 package com.project.timetracking.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.project.timetracking.model.enums.Role;
 import com.project.timetracking.util.PostgreSQLEnumType;
 import com.sun.istack.NotNull;
@@ -11,6 +12,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 
 @TypeDef(
@@ -22,7 +24,7 @@ import javax.validation.constraints.Size;
 @Table(name = "users")
 @Data
 @AllArgsConstructor
-@EqualsAndHashCode(of = "id")
+@EqualsAndHashCode(of = {"id", "login", "email"})
 @NoArgsConstructor
 @ToString(of = {"id", "login", "email"})
 public class User {
@@ -52,6 +54,15 @@ public class User {
 
     private boolean enabled;
 
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+    @JoinTable(
+            name = "users_activities",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "activities_id")}
+    )
+    private Set<Activity> activitiesSet;
+
     public User(String email, String login, String password) {
         this.email = email;
         this.login = login;
@@ -59,6 +70,5 @@ public class User {
         this.role = Role.USER;
         this.enabled = true;
     }
-
-
+    
 }

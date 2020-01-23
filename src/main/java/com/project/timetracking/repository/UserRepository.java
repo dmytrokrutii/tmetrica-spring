@@ -2,7 +2,9 @@ package com.project.timetracking.repository;
 
 import com.project.timetracking.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByLogin(String username);
 
