@@ -1,10 +1,10 @@
-CREATE TABLE users_activitys
+CREATE TABLE users_activities
 (
     user_id      integer NOT NULL,
-    activitys_id integer NOT NULL,
-    CONSTRAINT users_activitys_pkey PRIMARY KEY (user_id, activitys_id),
-    CONSTRAINT fk_activitys FOREIGN KEY (activitys_id)
-        REFERENCES public.activitys (id) MATCH SIMPLE
+    activities_id integer NOT NULL,
+    CONSTRAINT users_activities_pkey PRIMARY KEY (user_id, activities_id),
+    CONSTRAINT fk_activities FOREIGN KEY (activities_id)
+        REFERENCES public.activities (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
     CONSTRAINT fk_user FOREIGN KEY (user_id)
@@ -17,15 +17,15 @@ CREATE TABLE users_activitys
     )
     TABLESPACE pg_default;
 
-ALTER TABLE public.users_activitys
+ALTER TABLE public.users_activities
     OWNER to postgres;
 
-CREATE INDEX fki_fk_activitys
-    ON public.users_activitys USING btree
-        (activitys_id)
+CREATE INDEX fki_fk_activities
+    ON public.users_activities USING btree
+        (activities_id)
     TABLESPACE pg_default;
 
 CREATE INDEX fki_fk_user
-    ON public.users_activitys USING btree
+    ON public.users_activities USING btree
         (user_id)
     TABLESPACE pg_default;
