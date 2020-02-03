@@ -13,7 +13,7 @@ import java.util.Collection;
  */
 @Component
 @AllArgsConstructor
-public class UserPrincipal implements UserDetails {
+public class UserDetailsImpl implements UserDetails {
     private User user;
 
     @Override

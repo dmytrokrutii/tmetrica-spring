@@ -1,6 +1,6 @@
 ext {
     flyway {
-        url = 'jdbc:postgresql://localhost:5432/dev'
+        url = 'jdbc:postgresql://localhost:5432/epamFinalProject'
         schemas = ["public"]
         user = "postgres"
         password = "root"

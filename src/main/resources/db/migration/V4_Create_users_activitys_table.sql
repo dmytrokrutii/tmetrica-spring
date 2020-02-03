@@ -1,16 +1,16 @@
 CREATE TABLE users_activities
 (
-    user_id      integer NOT NULL,
+    user_id       integer NOT NULL,
     activities_id integer NOT NULL,
     CONSTRAINT users_activities_pkey PRIMARY KEY (user_id, activities_id),
     CONSTRAINT fk_activities FOREIGN KEY (activities_id)
         REFERENCES public.activities (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION,
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
     CONSTRAINT fk_user FOREIGN KEY (user_id)
         REFERENCES public.users (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
 )
     WITH (
         OIDS = FALSE

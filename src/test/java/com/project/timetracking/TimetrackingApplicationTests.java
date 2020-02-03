@@ -3,10 +3,16 @@ package com.project.timetracking;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+/**
+ * The type Timetracking application tests.
+ */
 @SpringBootTest
 class TimetrackingApplicationTests {
 
-	@Test
+    /**
+     * Context loads.
+     */
+    @Test
 	void contextLoads() {
 	}
 

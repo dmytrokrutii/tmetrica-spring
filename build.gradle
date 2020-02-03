@@ -43,10 +43,18 @@ dependencies {
 	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 	runtimeOnly 'org.postgresql:postgresql'
 	testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+	compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '5.2.1.RELEASE'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	compile('javax.servlet:jstl')
+	compile group: 'com.vladmihalcea', name: 'hibernate-types-52', version: '2.9.3'
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	// https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api
+	compile group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.1'
+
+	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.30'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testCompile group: 'junit', name: 'junit', version: '4.13'
 }
