@@ -1,1 +1,0 @@
-COPY users_activities FROM '${dir}/src/main/resources/db/devdata/V7_users_activitys.csv' CSV HEADER;

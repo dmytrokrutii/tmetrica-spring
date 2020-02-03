@@ -1,1 +1,0 @@
-COPY users(email, login, password, name, surname, role, enabled) FROM '${dir}/src/main/resources/db/devdata/V5_users.csv' CSV HEADER;

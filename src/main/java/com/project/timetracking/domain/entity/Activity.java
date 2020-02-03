@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -29,21 +28,28 @@ public class Activity {
     private String name;
 
     @NotBlank
-    @Column(name = "start_time")
+    @Column(name = "opening_time")
     private Date startDate;
 
     @NotBlank
-    @Column(name = "end_time")
+    @Column(name = "closing_time")
     private Date endDate;
 
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
-    @Type(type = "pgsql_enum")
     private ActivityStatus status;
 
     @JsonIgnore
     @ManyToMany(mappedBy = "activitiesSet", cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
     private Set<User> users;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "activityLog")
+    private Set<ActivityLog> logs;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "activityOrder")
+    private Set<Order> orders;
 
 }
