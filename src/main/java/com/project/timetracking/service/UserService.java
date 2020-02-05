@@ -3,8 +3,6 @@ package com.project.timetracking.service;
 import com.project.timetracking.domain.entity.User;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 /**
  * The interface User service.
  */
@@ -33,19 +31,4 @@ public interface UserService {
      * @return the user
      */
     User findByEmail(String email);
-
-    /**
-     * Update.
-     *
-     * @param user the user
-     */
-    void update(User user);
-
-    /**
-     * Gets all.
-     *
-     * @return the all
-     */
-    List<User> getAll();
-
 }

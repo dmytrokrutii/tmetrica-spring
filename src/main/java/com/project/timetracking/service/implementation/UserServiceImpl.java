@@ -10,7 +10,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
-import java.util.List;
 
 /**
  * The type User service.
@@ -56,17 +55,6 @@ public class UserServiceImpl implements UserService {
     public User findByEmail(String email) {
         log.info("Find user by email {}", email);
         return userRepository.findByEmail(email);
-    }
-
-    @Override
-    public void update(User user) {
-        log.info("Update user {}", user);
-        userRepository.save(user);
-    }
-
-    @Override
-    public List<User> getAll() {
-        return userRepository.findAll();
     }
 
 }
