@@ -1,4 +1,4 @@
-package com.project.timetracking.contoller;
+package com.project.timetracking.controller;
 
 import com.project.timetracking.domain.entity.ActivityLog;
 import com.project.timetracking.domain.entity.dto.Statistic;

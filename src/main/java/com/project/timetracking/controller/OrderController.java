@@ -1,4 +1,4 @@
-package com.project.timetracking.contoller;
+package com.project.timetracking.controller;
 
 import com.project.timetracking.domain.entity.Order;
 import com.project.timetracking.security.UserDetailsServiceImpl;

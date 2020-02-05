@@ -54,7 +54,7 @@ public interface ActivityLogService {
     Page<Statistic> getStatisticByUserEmail(String email, Pageable pageable);
 
     /**
-     * Find logs by user email page.
+     * Find logs by user email.
      *
      * @param email    the email
      * @param pageable the pageable
@@ -63,7 +63,7 @@ public interface ActivityLogService {
     Page<ActivityLog> findLogsByUserEmail(String email, Pageable pageable);
 
     /**
-     * Find by user and activity page.
+     * Find by user and activity.
      *
      * @param email     the email
      * @param acidityId the acidity id
