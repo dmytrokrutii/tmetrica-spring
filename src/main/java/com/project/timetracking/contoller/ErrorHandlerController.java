@@ -27,12 +27,11 @@ public class ErrorHandlerController implements ErrorController {
      * @return the string
      */
     @RequestMapping("/error")
-    @ExceptionHandler(RuntimeException.class)
     public String handleError(HttpServletRequest request, Model model) {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         if (status != null) {
             int statusCode = Integer.parseInt(status.toString());
-            if (statusCode == HttpStatus.NOT_FOUND.value() && statusCode == HttpStatus.FORBIDDEN.value()) {
+            if (statusCode == HttpStatus.NOT_FOUND.value() || statusCode == HttpStatus.FORBIDDEN.value()) {
                 model.addAttribute("code", statusCode);
                 return ERROR_PAGE;
             }
@@ -40,7 +39,6 @@ public class ErrorHandlerController implements ErrorController {
         model.addAttribute("code", HttpStatus.INTERNAL_SERVER_ERROR.value());
         return ERROR_PAGE;
     }
-
 
     @Override
     public String getErrorPath() {
