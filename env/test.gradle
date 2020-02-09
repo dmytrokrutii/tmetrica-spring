@@ -1,0 +1,10 @@
+ext {
+  flyway {
+    url = 'jdbc:postgresql://localhost:5432/test'
+    schemas = ["test"]
+    user = "postgres"
+    password = "root"
+    driver = 'org.postgresql.Driver'
+    locations = ["filesystem:${project.projectDir}/src/main/resources/db/migration", "filesystem:${project.projectDir}/src/main/resources/db/testdata"]
+  }
+}
