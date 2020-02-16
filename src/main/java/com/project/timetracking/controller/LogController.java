@@ -1,9 +1,9 @@
 package com.project.timetracking.controller;
 
-import com.project.timetracking.domain.entity.ActivityLog;
-import com.project.timetracking.domain.entity.dto.Statistic;
-import com.project.timetracking.service.ActivityLogService;
-import com.project.timetracking.service.ActivityService;
+import com.project.timetracking.model.domain.entity.ActivityLog;
+import com.project.timetracking.model.domain.entity.dto.Statistic;
+import com.project.timetracking.model.service.ActivityLogService;
+import com.project.timetracking.model.service.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

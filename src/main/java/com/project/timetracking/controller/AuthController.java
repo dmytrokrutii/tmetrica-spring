@@ -1,7 +1,7 @@
 package com.project.timetracking.controller;
 
-import com.project.timetracking.domain.entity.User;
-import com.project.timetracking.service.UserService;
+import com.project.timetracking.model.domain.entity.User;
+import com.project.timetracking.model.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

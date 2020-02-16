@@ -1,8 +1,8 @@
 package com.project.timetracking.controller;
 
-import com.project.timetracking.domain.entity.Order;
-import com.project.timetracking.security.UserDetailsServiceImpl;
-import com.project.timetracking.service.OrderService;
+import com.project.timetracking.model.domain.entity.Order;
+import com.project.timetracking.model.security.UserDetailsServiceImpl;
+import com.project.timetracking.model.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

@@ -98,10 +98,10 @@
                         <c:choose>
                             <c:when test="${usersList}">
                                 <a href="${pageContext.request.contextPath}/times/acivity/${activity.id}"
-                                   class="succes"><i
+                                   class="success"><i
                                         class="material-icons"
                                         data-toggle="tooltip"
-                                        title="join">&#xe8ef;</i></a>
+                                        title="show entries">&#xe8ef;</i></a>
                                 <a href="#deleteRecordModal" class="delete passingIDDelete" data-id="${activity.id}"
                                    data-toggle="modal"><i
                                         class="material-icons"
@@ -142,7 +142,8 @@
                 <div class="modal-footer">
                     <input type="hidden" class="form-control" name="activityId" id="activityIdToDelete" value="">
                     <input type="button" class="btn btn-default" data-dismiss="modal"
-                           value="<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>">
+                           value="<spring:message
+                code="cancel"/>">
                     <input type="submit" class="btn btn-danger" value="<spring:message
                 code="delete.button"/>">
                 </div>
