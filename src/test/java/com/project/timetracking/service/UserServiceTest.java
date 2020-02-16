@@ -1,8 +1,8 @@
 package com.project.timetracking.service;
 
-import com.project.timetracking.domain.entity.User;
-import com.project.timetracking.repository.UserRepository;
-import com.project.timetracking.service.UserService;
+import com.project.timetracking.model.domain.entity.User;
+import com.project.timetracking.model.repository.UserRepository;
+import com.project.timetracking.model.service.UserService;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

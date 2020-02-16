@@ -1,7 +1,7 @@
 insert into users(email, password, name)
-VALUES ('solosuicide133@gmail.com', '$2a$12$Q.9c5XxwNTWXDaQvGhxs4OR5PlJiF2vzm5My4ywAgHxJDawHCZv6W', 'Dmytro Krutii');
+VALUES ('admin@test.com', '$2a$12$Q.9c5XxwNTWXDaQvGhxs4OR5PlJiF2vzm5My4ywAgHxJDawHCZv6W', 'Admin');
 insert into users(email, password, name)
-VALUES ('mykytafrolow@gmail.com', '$2a$12$pegFHPkjlEVbvc9hKx8xdupYjbyQ09xlkzlRh0UIjbOKus1ehshzG', 'Mykyta Frolow');
+VALUES ('user@test.com', '$2a$12$pegFHPkjlEVbvc9hKx8xdupYjbyQ09xlkzlRh0UIjbOKus1ehshzG', 'Test user');
 insert into user_roles(user_id, role)
 VALUES (1, 'ADMIN');
 insert into user_roles(user_id, role)
